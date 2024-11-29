@@ -598,7 +598,7 @@ img {
 .footer-input-email::placeholder {
   font-weight: 400;
   font-size: 12px;
-  line-height: 200%;
+  line-height: 2.0;
   letter-spacing: 0.04em;
   color: #fff;
 }

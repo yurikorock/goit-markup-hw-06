@@ -83,8 +83,14 @@ img {
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .nav-li {
@@ -150,8 +156,15 @@ img {
 }
 
 .header-address {
-  font-style: normal;
-  margin-left: auto;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-address {
+    display: block;
+    font-style: normal;
+    margin-left: auto;
+  }
 }
 
 .header-address-list {

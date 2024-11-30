@@ -171,9 +171,19 @@ img {
   }
 }
 
-.header-address-list {
-  display: flex;
-  gap: 40px;
+
+@media screen and (min-width: 768px) {
+  .header-address-list {
+    display: block;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-address-list {
+    display: flex;
+
+  }
 }
 
 /* .header-address-item {
@@ -214,7 +224,7 @@ img {
 /* #region Hero */
 .hero {
   background-color: #2e2f42;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)),
     url(../images/hero-image.jpg);
@@ -225,19 +235,48 @@ img {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 112px 0;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero {
+    padding: 188px 0;
+  }
+}
+
+
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
 
   /* line-height: 60px; */
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-  max-width: 496px;
+
+  max-width: 216px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
 
 .hero-btn {
@@ -700,13 +739,19 @@ img {
   transform: translateX(-50%) translateY(-50%);
 
   border-radius: 4px;
-  width: 408px;
+  width: 288px;
   min-height: 584px;
   padding: 72px 24px 24px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
 }
 
 .modal-btn {
@@ -843,6 +888,10 @@ input[type="checkbox"]:checked+.modal-form-agreement-text .modal-form-checkbox {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .modal-form-checkbox {
@@ -861,6 +910,8 @@ input[type="checkbox"]:checked+.modal-form-agreement-text .modal-form-checkbox {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  flex-shrink: 0;
 
 }
 

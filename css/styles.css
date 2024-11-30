@@ -874,6 +874,12 @@ input[type="checkbox"]:checked+.modal-form-agreement-text .modal-form-checkbox {
 }
 
 /* Mobile menu */
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -886,6 +892,9 @@ input[type="checkbox"]:checked+.modal-form-agreement-text .modal-form-checkbox {
   flex-direction: column;
   justify-content: space-between;
   gap: 48px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
 
 }

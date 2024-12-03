@@ -785,6 +785,7 @@ img {
     align-items: baseline;
     flex-wrap: nowrap;
     padding: 0 15px;
+    column-gap: 0;
   }
 }
 
@@ -803,6 +804,7 @@ img {
   .footer-logo-container {
     margin-right: 120px;
     min-width: 264px;
+
   }
 }
 

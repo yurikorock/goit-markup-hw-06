@@ -33,7 +33,7 @@ img {
 }
 
 .container {
-  min-width: 320px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 0 16px;
   justify-content: space-between;
@@ -41,16 +41,16 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    min-width: 768px;
+    max-width: 768px;
 
   }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
-    min-width: 1158px;
+    max-width: 1158px;
     padding: 0 15px;
-    margin: 0 141px;
+
 
   }
 }
@@ -77,7 +77,7 @@ img {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  margin-right: 76px;
+  margin-right: 149px;
 
   /* line-height: 21px; */
   line-height: 1.17;
@@ -86,6 +86,20 @@ img {
   color: #4d5ae5;
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-logo {
+    margin-right: 120px;
+  }
+
+}
+
+@media screen and (min-width: 1158px) {
+  .nav-logo {
+    margin-right: 76px;
+  }
+
 }
 
 .nav-list {
@@ -176,14 +190,17 @@ img {
 
 @media screen and (min-width: 768px) {
   .header-address-list {
-    display: block;
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .header-address-list {
     display: flex;
+    flex-direction: row;
+    gap: 40px;
 
   }
 }
@@ -191,17 +208,29 @@ img {
 /* .header-address-item {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
+@media screen and (min-width: 768px) {
+  .header-address .link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.header-address .link {
-  font-weight: 400;
-  font-size: 16px;
+  @media screen and (min-width: 1158px) {
+    .header-address .link {
+      font-size: 16px;
 
-  /* line-height: 24px; */
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      /* line-height: 24px; */
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+
+
+    }
+  }
 }
+
 
 .header-address .link:hover,
 .header-address .link:focus {
@@ -211,7 +240,9 @@ img {
 @media screen and (min-width: 320px) {
   .burger-menu {
     background-color: transparent;
+    border: none;
     border-color: transparent;
+
   }
 }
 
@@ -237,8 +268,7 @@ img {
   margin: 0 auto;
 }
 
-@media (min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+@media (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
@@ -257,8 +287,7 @@ img {
   }
 }
 
-@media only screen and (min-width: 768px) and (min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
@@ -276,8 +305,7 @@ img {
   }
 }
 
-@media only screen and (min-width: 1158px) and (min-resolution: 192dpi),
-(min-resolution: 2dppx) {
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
@@ -391,7 +419,7 @@ img {
   }
 }
 
-.benefits-item {}
+// .benefits-item {}
 
 @media screen and (min-width: 768px) {
   .benefits-item {
@@ -1023,7 +1051,7 @@ img {
   border-radius: 4px;
   width: 288px;
   min-height: 584px;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px 16px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
@@ -1228,8 +1256,13 @@ input[type="checkbox"]:checked+.modal-form-agreement-text .modal-form-checkbox {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  max-width: 320px;
+}
 
-
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-close {
@@ -1254,7 +1287,7 @@ input[type="checkbox"]:checked+.modal-form-agreement-text .modal-form-checkbox {
   margin-bottom: auto;
 }
 
-.mobile-nav-item {
+.mobile-nav-item:not(:last-child) {
   margin-bottom: 40px;
 }
 
